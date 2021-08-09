@@ -1,0 +1,191 @@
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #eb4537;
+  display: flex;
+  overflow-y: visible;
+  justify-content: space-between;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: -2px 17px 42px #b9493fc7;
+}
+
+header > .menu_button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+header > .menu_button > svg {
+  width: 24px;
+  height: 24px;
+  color: #ffd97d;
+  cursor: pointer;
+}
+header > .logo_section > img {
+  margin-left: 2.5rem;
+  height: 120px;
+  width: 120px;
+}
+
+header > .links_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .links_section > .site_pages > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+}
+header > .links_section > .site_pages > ul > li {
+  margin-right: 2.5rem;
+  display: inline-block;
+  vertical-align: baseline;
+}
+header > .links_section > .site_pages > ul > li > a {
+  font-family: mont, sans-serif;
+  font-weight: 600;
+  color: #ffd97d;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 20px 0;
+  line-height: 20px;
+}
+
+header > .links_section > .site_pages > ul > li > a:hover {
+  border-top: 4px solid #ffd97d;
+  border-bottom: 4px solid #ffd97d;
+  padding: 6px 0;
+}
+
+header > .links_section > .buy_now {
+  display: flex;
+  border: 2px solid #ffd97d;
+  color: #ffd97d;
+  margin-right: 2.5rem;
+  padding: 0.5em 2.2em;
+  font-family: mont, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header > .links_section > .buy_now a {
+  color: #ffd97d;
+  height: 20px;
+}
+header > .links_section > .buy_now > .h1 {
+  height: 20px;
+}
+
+header > .links_section > .buy_now:hover {
+  background-color: #ffd97d;
+  color: #eb4537;
+  transition: 0.5s ease;
+}
+header > .links_section > .buy_now:hover a {
+  color: #eb4537;
+  transition: 0.5s ease;
+}
+
+.mobile_menu {
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-color: #eb4537;
+  position: fixed;
+  display: flex;
+  top: 60px;
+  left: -100vw;
+  z-index: 2;
+  transition: 0.3s ease;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobile_menu > .mobile_menu_items {
+  margin-top: 6rem;
+  text-align: center;
+}
+.mobile_menu > .mobile_menu_items > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+.mobile_menu > .mobile_menu_items > ul > li {
+  margin-bottom: 2rem;
+}
+.mobile_menu > .mobile_menu_items > ul > li > a {
+  color: #ffd97d;
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.mobile_menu > .mobile_menu_items > .buy_now {
+  display: flex;
+  border: 4px solid #fff;
+  color: #fff;
+  padding: 0.25em 1em;
+  font-family: mont, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 2em;
+}
+.mobile_menu > .mobile_menu_items > .buy_now a {
+  color: #fff;
+  text-decoration: none;
+  height: 40px;
+}
+.mobile_menu > .mobile_menu_items > .buy_now > .h1 {
+  height: 40px;
+}
+
+.mobile_menu > .mobile_menu_items > .buy_now:hover {
+  background-color: #fff;
+  color: #eb4537;
+  transition: 0.5s ease;
+}
+.mobile_menu > .mobile_menu_items > .buy_now:hover a {
+  color: #eb4537;
+  transition: 0.5s ease;
+}
+
+@media (max-width: 860px) {
+  header > .links_section > .site_pages > ul {
+    display: none;
+  }
+  header > .menu_button {
+    display: flex;
+  }
+  header > .logo_section > img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.8em;
+    margin-left: 0;
+  }
+  header > .links_section > .buy_now {
+    padding: 0.2rem 0.5rem;
+  }
+  .mobile_menu.true {
+    left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  header > .logo_section > img {
+    height: 90px;
+    width: 90px;
+  }
+  header > .links_section > .buy_now {
+    padding: 0.2rem 0.5rem;
+    margin-right: 1rem;
+  }
+}

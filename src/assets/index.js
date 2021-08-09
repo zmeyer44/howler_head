@@ -1,0 +1,15 @@
+export const images = {
+  logo: require("./logo.png").default,
+  hero: require("./hero.jpg").default,
+  hero_dark: require("./hero_dark.jpg").default,
+  business_monkey_shirt: require("./business-monkey-shirt.png").default,
+  cool_monkey_shirt: require("./cool-monkey-shirt.png").default,
+  party_monkey_shirt: require("./party-monkey-shirt.png").default,
+  coasters: require("./coasters.png").default,
+  umbrella: require("./umbrella.png").default,
+  glasses: require("./glasses.png").default,
+  ufc: require("./ufc.png").default,
+  recipe_1: require("./recipe_1.jpg").default,
+  recipe_2: require("./recipe_2.jpg").default,
+  recipe_3: require("./recipe_3.jpg").default,
+};
