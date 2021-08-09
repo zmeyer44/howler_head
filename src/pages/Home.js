@@ -1,14 +1,10 @@
-import { Switch, Route, Link } from "react-router-dom";
-import { Layout, Row, Col, Divider } from "antd";
+import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import CourseGrid from "../components/CourseGrid";
-import CourseDetails from "../components/CourseDetails";
 
 import "./home.styles.css";
 import { images } from "../assets";
 
-const { Header, Footer, Sider, Content } = Layout;
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -23,65 +19,6 @@ const responsive = {
     items: 1,
   },
 };
-// const Home = () => {
-//   return (
-//     <div style={{ display: "flex", minHeight: "100vh" }}>
-//       <Layout style={{ flex: 1 }}>
-//         <Header
-//           style={{
-//             backgroundColor: "#fff",
-//             display: "flex",
-//             justifyContent: "flex-start",
-//             alignItems: "center",
-//           }}
-//         >
-//           <Link to="/">
-//             <div
-//               className="logo"
-//               style={{
-//                 display: "flex",
-//                 justifyContent: "center",
-//                 alignItems: "center",
-//               }}
-//             >
-//               <Logo
-//                 style={{
-//                   justifyContent: "center",
-//                   alignItems: "center",
-//                 }}
-//               />
-//             </div>
-//           </Link>
-//         </Header>
-//         <Content>
-//           <Switch>
-//             <Route
-//               exact
-//               path="/"
-//               render={() => <CourseGrid courses={courses} />}
-//             />
-//             <Route
-//               path="/course/:slug"
-//               render={() => <CourseDetails courses={courses} />}
-//             />
-//           </Switch>
-//         </Content>
-
-//         <Footer
-//           style={{
-//             borderWidth: 0,
-//             borderTopWidth: 1,
-//             borderStyle: "solid",
-//             borderColor: "#0000002b",
-//           }}
-//         >
-//           Copyright &copy; {new Date().getFullYear()} Viatris Inc. All Rights
-//           Reserved.
-//         </Footer>
-//       </Layout>
-//     </div>
-//   );
-// };
 
 function hero() {
   return (

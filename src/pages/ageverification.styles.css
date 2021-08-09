@@ -12,3 +12,8 @@ main {
   background-color: #ffd97d;
   flex-direction: column;
 }
+main > img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
