@@ -76,6 +76,10 @@ main > .error.true {
 }
 
 @media only screen and (max-width: 720px) {
+  main {
+    justify-content: flex-start;
+    padding-top: 5rem;
+  }
   main > .form {
     flex-direction: column;
     width: 90vw;
