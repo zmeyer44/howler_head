@@ -4,7 +4,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./home.styles.css";
 import { images } from "../assets";
-import { FaChevronRight } from "react-icons/fa";
 
 const responsive = {
   desktop: {
