@@ -408,7 +408,7 @@
   height: 45px;
 }
 
-@media only screen and (max-width: 1518px) and (min-width: 820px) {
+@media only screen and (max-width: 1535px) and (min-width: 820px) {
   .recipe_section > .recipe_content {
     flex-direction: column;
     align-self: center;
