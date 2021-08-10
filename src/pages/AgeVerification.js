@@ -6,14 +6,13 @@ const AgeVerification = ({ setVerified }) => {
     day: "",
     year: "",
   });
+
   const checkAge = (ageValues) => {
     if (ageValues.month && ageValues.day && ageValues.year) {
       let today = new Date(),
         dob = new Date(`${ageValues.month} ${ageValues.day} ${ageValues.year}`),
         diff = today.getTime() - dob.getTime(),
         years = Math.floor(diff / 31556736000);
-
-      console.log(years);
       if (years >= 21) {
         setVerified(true);
       } else {
@@ -23,6 +22,24 @@ const AgeVerification = ({ setVerified }) => {
       setAgeValues({ ...ageValues, error: true });
     }
   };
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    if (name == "month") {
+      setAgeValues({ ...ageValues, month: value });
+      document.getElementById("age_day").focus();
+    } else if (name == "day") {
+      if (value !== "0" && value <= 31) {
+        setAgeValues({ ...ageValues, day: value });
+        if (value.length == 2) {
+          document.getElementById("age_year").focus();
+        }
+      }
+    } else {
+      setAgeValues({ ...ageValues, year: value });
+    }
+  };
+
   return (
     <main>
       <img src={images.logo} alt="logo" />
@@ -35,9 +52,7 @@ const AgeVerification = ({ setVerified }) => {
             id="age_month"
             required
             value={ageValues?.month}
-            onChange={(e) =>
-              setAgeValues({ ...ageValues, month: e.target.value })
-            }
+            onChange={(e) => handleChange(e)}
           >
             <option value selected disabled>
               Month
@@ -65,9 +80,7 @@ const AgeVerification = ({ setVerified }) => {
             name="day"
             id="age_day"
             value={ageValues?.day}
-            onChange={(e) =>
-              setAgeValues({ ...ageValues, day: e.target.value })
-            }
+            onChange={(e) => handleChange(e)}
             required
           />
         </div>
@@ -80,9 +93,7 @@ const AgeVerification = ({ setVerified }) => {
             name="year"
             id="age_year"
             value={ageValues?.year}
-            onChange={(e) =>
-              setAgeValues({ ...ageValues, year: e.target.value })
-            }
+            onChange={(e) => handleChange(e)}
             required
           />
         </div>

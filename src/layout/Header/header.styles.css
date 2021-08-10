@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: #eb4537;
   display: flex;
   overflow-y: visible;
@@ -99,7 +99,7 @@ header > .links_section > .buy_now:hover a {
   background-color: #eb4537;
   position: fixed;
   display: flex;
-  top: 60px;
+  top: 70px;
   left: -100vw;
   z-index: 2;
   transition: 0.3s ease;

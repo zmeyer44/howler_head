@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import "antd";
 import "./home.styles.css";
 import { images } from "../assets";
 
@@ -50,14 +50,11 @@ function merch() {
           draggable={true}
           showDots={false}
           responsive={responsive}
-          ssr={false} // means to render carousel on server-side.
+          ssr
           infinite={true}
-          autoPlaySpeed={1000}
           keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
           containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
+          removeArrowOnDeviceType={["mobile"]}
           dotListClass="custom-dot-list-style"
           itemClass="merch_item"
         >

@@ -1,3 +1,11 @@
+@keyframes animate_opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes animate_left {
   0% {
     opacity: 0;
@@ -42,6 +50,7 @@
   height: 90vh;
   overflow: hidden;
   color: "fff";
+  animation: animate_opacity 1s 1 ease;
   background: linear-gradient(
       90deg,
       rgba(16, 12, 13, 255) 40%,
