@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./home.styles.css";
 import { images } from "../assets";
+import { FaChevronRight } from "react-icons/fa";
 
 const responsive = {
   desktop: {
@@ -53,7 +55,7 @@ function merch() {
           infinite={true}
           keyBoardControl={true}
           containerClass="carousel-container"
-          removeArrowOnDeviceType={["mobile"]}
+          removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
           itemClass="merch_item"
         >
@@ -130,6 +132,9 @@ function recipes() {
   );
 }
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       style={{ display: "flex", flexDirection: "column", marginTop: "60px" }}

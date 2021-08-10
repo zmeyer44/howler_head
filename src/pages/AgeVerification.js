@@ -31,11 +31,15 @@ const AgeVerification = ({ setVerified }) => {
     } else if (name === "day") {
       if (value !== "0" && value <= 31) {
         setAgeValues({ ...ageValues, day: value });
-        if (value.length === 2) {
+        if (value.length === 2 || value >= 4) {
           document.getElementById("age_year").focus();
         }
       }
     } else {
+      if (value.length === 4) {
+        setAgeValues({ ...ageValues, year: value });
+        checkAge(ageValues);
+      }
       setAgeValues({ ...ageValues, year: value });
     }
   };

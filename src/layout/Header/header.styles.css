@@ -180,6 +180,9 @@ header > .links_section > .buy_now:hover a {
 }
 
 @media (max-width: 540px) {
+  header {
+    box-shadow: -2px 17px 42px #be4b4194;
+  }
   header > .logo_section > img {
     height: 90px;
     width: 90px;

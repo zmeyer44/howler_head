@@ -50,7 +50,7 @@
   height: 90vh;
   overflow: hidden;
   color: "fff";
-  animation: animate_opacity 1s 1 ease;
+  animation: animate_opacity 1.5s 1 ease;
   background: linear-gradient(
       90deg,
       rgba(16, 12, 13, 255) 40%,
@@ -119,10 +119,10 @@
   content: "";
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   right: 100%;
-  bottom: 0;
+  bottom: -1px;
   background: #ffd97d;
   transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1),
     left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
@@ -253,6 +253,13 @@
   display: flex;
   padding: 2rem 5rem;
   justify-content: space-between;
+}
+.merch_section .react-multiple-carousel__arrow {
+  background-color: transparent;
+}
+.merch_section .react-multiple-carousel__arrow::before {
+  color: #100c0d;
+  font-size: 1.5rem;
 }
 .merch_section .merch_item {
   display: flex;
