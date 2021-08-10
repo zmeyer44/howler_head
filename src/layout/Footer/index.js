@@ -5,7 +5,7 @@ import "./footer.styles.css";
 const Footer = () => {
   return (
     <div className="footer_container">
-      <img src={images.logo} />
+      <img src={images.logo} alt="logo" />
       <div className="social">
         <h4>Follow Us</h4>
         <div className="icons">

@@ -25,7 +25,7 @@ const AgeVerification = ({ setVerified }) => {
   };
   return (
     <main>
-      <img src={images.logo} />
+      <img src={images.logo} alt="logo" />
       <h1>Time to check id</h1>
       <h3>Enter your date of birth</h3>
       <div className="form">

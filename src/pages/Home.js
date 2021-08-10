@@ -29,15 +29,12 @@ function hero() {
           <h1>The Monkey Spirit</h1>
           <h3>Kentucky straight burbon whiskey with natural banana flavor</h3>
           <div className="action_section">
-            <img src={images.ufc} />
+            <img src={images.ufc} alt="ufc logo" />
             <div className="btn_container">
               <Link>Explore Now</Link>
             </div>
           </div>
         </div>
-        {/* <div className="image_section">
-          <img src={images.hero_dark} />
-        </div> */}
       </div>
     </div>
   );
@@ -65,27 +62,27 @@ function merch() {
           itemClass="merch_item"
         >
           <div className="merch_card">
-            <img src={images.business_monkey_shirt} />
+            <img src={images.business_monkey_shirt} alt="item" />
             <div className="bottom">Business Monkey</div>
           </div>
           <div className="merch_card">
-            <img src={images.cool_monkey_shirt} />
+            <img src={images.cool_monkey_shirt} alt="item" />
             <div className="bottom">Cool Monkey</div>
           </div>
           <div className="merch_card">
-            <img src={images.party_monkey_shirt} />
+            <img src={images.party_monkey_shirt} alt="item" />
             <div className="bottom">Party Monkey</div>
           </div>
           <div className="merch_card">
-            <img src={images.glasses} />
+            <img src={images.glasses} alt="item" />
             <div className="bottom">Shot Glasses</div>
           </div>
           <div className="merch_card">
-            <img src={images.coasters} />
+            <img src={images.coasters} alt="item" />
             <div className="bottom">Coasters</div>
           </div>
           <div className="merch_card">
-            <img src={images.umbrella} />
+            <img src={images.umbrella} alt="item" />
             <div className="bottom">Mini Umbrellas</div>
           </div>
         </Carousel>
@@ -105,21 +102,21 @@ function recipes() {
         <h1>Recipies</h1>
         <div className="recipe_content">
           <div className="recipe_card">
-            <img src={images.recipe_1} />
+            <img src={images.recipe_1} alt="recipe" />
             <div className="bottom">
               <span>Featured Recipe</span>
               <h1>Monkey Martini</h1>
             </div>
           </div>
           <div className="recipe_card">
-            <img src={images.recipe_2} />
+            <img src={images.recipe_2} alt="recipe" />
             <div className="bottom">
               <span>Featured Recipe</span>
               <h1>Yellow Submarine</h1>
             </div>
           </div>
           <div className="recipe_card">
-            <img src={images.recipe_3} />
+            <img src={images.recipe_3} alt="recipe" />
             <div className="bottom">
               <span>Featured Recipe</span>
               <h1>Dirty Banana</h1>
