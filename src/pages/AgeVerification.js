@@ -6,20 +6,23 @@ const AgeVerification = ({ setVerified }) => {
     day: "",
     year: "",
   });
+  const [error, setError] = useState("");
 
   const checkAge = (ageValues) => {
-    if (ageValues.month && ageValues.day && ageValues.year) {
-      let today = new Date(),
-        dob = new Date(`${ageValues.month} ${ageValues.day} ${ageValues.year}`),
-        diff = today.getTime() - dob.getTime(),
-        years = Math.floor(diff / 31556736000);
-      if (years >= 21) {
-        setVerified(true);
-      } else {
-        setAgeValues({ ...ageValues, error: true });
-      }
+    if (!ageValues.month || !ageValues.day || !ageValues.year) {
+      return setError(true);
+    }
+
+    let today = new Date(),
+      dob = new Date(`${ageValues.month} ${ageValues.day} ${ageValues.year}`),
+      diff = today.getTime() - dob.getTime(),
+      years = Math.floor(diff / 31556736000);
+
+    if (years >= 21) {
+      return setVerified(true);
     } else {
-      setAgeValues({ ...ageValues, error: true });
+      console.log("not old enough");
+      return setError(true);
     }
   };
 
@@ -38,7 +41,7 @@ const AgeVerification = ({ setVerified }) => {
     } else {
       if (value.length === 4) {
         setAgeValues({ ...ageValues, year: value });
-        checkAge(ageValues);
+        checkAge({ ...ageValues, year: value });
       }
       setAgeValues({ ...ageValues, year: value });
     }
@@ -110,7 +113,7 @@ const AgeVerification = ({ setVerified }) => {
           />
         </div>
       </div>
-      <span className={`error ${ageValues?.error}`}>
+      <span className={`error ${error}`}>
         You must be 21 to enter this site
       </span>
     </main>
