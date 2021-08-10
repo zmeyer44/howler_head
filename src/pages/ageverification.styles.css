@@ -17,3 +17,68 @@ main > img {
   height: 150px;
   margin-bottom: 2rem;
 }
+main > .form {
+  display: flex;
+  margin: 1rem;
+}
+main > .form > div {
+  margin: 0 2px;
+  flex: 1;
+}
+main > .form select,
+main > .form input {
+  color: #0d2139;
+  background-color: transparent;
+  display: block;
+  outline: 0;
+  border: 2px solid #0d2139;
+  border-radius: 0;
+  cursor: pointer;
+  margin-bottom: 1em;
+  padding: 1em 0.5em;
+  width: 100%;
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 1.2;
+}
+main > .form select {
+  background-image: url(https://cdn.shopify.com/s/files/1/0563/1888/6056/files/chevron-down-solid.svg?v=1622508990);
+  background-size: 0.8em;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+main > .form input {
+  max-width: 100%;
+}
+main > .form input[type="submit"] {
+  color: #fff;
+  background-color: #eb4537;
+  display: inline-block;
+  outline: 0;
+  border: 2px solid #eb4537;
+  border-radius: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding: 1em 0.5em;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
+}
+main > .error {
+  color: #eb4537;
+  display: none;
+}
+main > .error.true {
+  display: unset;
+}
+
+@media only screen and (max-width: 720px) {
+  main > .form {
+    flex-direction: column;
+    width: 90vw;
+    max-width: 400px;
+  }
+}
