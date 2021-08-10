@@ -25,13 +25,13 @@ const AgeVerification = ({ setVerified }) => {
 
   const handleChange = (e) => {
     const { value, name } = e.target;
-    if (name == "month") {
+    if (name === "month") {
       setAgeValues({ ...ageValues, month: value });
       document.getElementById("age_day").focus();
-    } else if (name == "day") {
+    } else if (name === "day") {
       if (value !== "0" && value <= 31) {
         setAgeValues({ ...ageValues, day: value });
-        if (value.length == 2) {
+        if (value.length === 2) {
           document.getElementById("age_year").focus();
         }
       }
