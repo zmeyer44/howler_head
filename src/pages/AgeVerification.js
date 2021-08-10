@@ -12,9 +12,6 @@ const AgeVerification = ({ setVerified }) => {
     if (!ageValues.month || !ageValues.day || !ageValues.year) {
       return setError(true);
     }
-    if (ageValues.year.legnth !== 4) {
-      return setError(true);
-    }
 
     let today = new Date(),
       dob = new Date(`${ageValues.month} ${ageValues.day} ${ageValues.year}`),
